@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 
   main {
     margin: 0 auto;
-    padding: ${rem("130px")} ${layout.sidePadding} 0 ${layout.sidePadding};
+    padding: 0 ${layout.sidePadding};
     max-width: ${layout.contentMaxWidth};
     height: 200vh;
   }

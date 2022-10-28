@@ -14,8 +14,8 @@ export const Wrapper = styled.nav`
 
 export const Overlay = styled.div<OverlayProps>`
   --blur: ${(props) => (props.bg ? nav.blur : "none")};
-  border: ${(props) =>
-    props.bg ? `${rem("1px")} solid ${colors.purple500}` : 0};
+  border: ${rem("1px")} solid
+    ${(props) => (props.bg ? colors.purple500 : "transparent")};
   border-radius: 999px;
   background: ${(props) =>
     props.bg ? `${colors.purple850}B3` : "transparent"};
@@ -25,6 +25,7 @@ export const Overlay = styled.div<OverlayProps>`
   justify-content: space-between;
   align-items: center;
   padding: 0 ${rem("8px")};
+  transition-duration: ${global.hoverTransitionDuration};
 
   > div {
     height: 68px;
