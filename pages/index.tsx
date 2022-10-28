@@ -55,17 +55,9 @@ export default function Home() {
         />
         <ChatBubble side="right" value="Smart What ?!" />
         <p>inView: ${inView}</p>
-        {/*<h1>Home</h1>
-      <Web3Button />
-        <input
-          type="url"
-          value={contractUrl}
-          onChange={(evt) => { setContractUrl(evt.target.value); }}
-        />
-        <button type="button" onClick={() => { fetchAndSetTranslation() } }>Translate</button>
-      <hr />
-      {/* needs pre element to respect newline|return */}
-      <pre dangerouslySetInnerHTML={translation}></pre> */}
+
+        {/* TODO: MOVE THIS TO SOME OTHER PLACE THAT MAKES SENSE */}
+        <pre dangerouslySetInnerHTML={translation}></pre>
       </main>
     </>
   );
