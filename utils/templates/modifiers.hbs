@@ -1,4 +1,6 @@
-is modified by
-{{#each modifiers}}
-  executing {{this.name}} {{#if this.arguments.length}}with arguments {{#each this.arguments}}{{this.name}} {{this.typeDescriptions.typeString}}, {{/each}}{{/if}}
-{{/each}}
+<p>is modified by</p>
+<ul>
+    {{#each modifiers}}
+        <li>executing <span class="color1">{{this.name}}</span> {{#if this.arguments.length}}with arguments {{#each this.arguments}}<span class="color2">{{this.name}} {{this.typeDescriptions.typeString}}</span>, {{/each}}{{/if}}</li>
+    {{/each}}
+</ul>
