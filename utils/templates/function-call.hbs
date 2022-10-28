@@ -1,0 +1,1 @@
+call function {{name}} {{#if args.length}}with arguments {{#each args}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}{{/if}}

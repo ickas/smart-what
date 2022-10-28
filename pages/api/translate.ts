@@ -1,6 +1,6 @@
 import {NextApiRequest, NextApiResponse} from "next";
 import axios from "axios";
-
+import translator from '../../utils/translator.mjs';
 
 /**
  * Uses AXIOS to unmarshal a URL and get its source and will attempt to translate it
@@ -16,11 +16,11 @@ async function post(req: NextApiRequest, res: NextApiResponse) {
     const contractSource = await axios.get<string>(new URL(req.body.url).toString()).then(({data}) => data);
     console.log('source!', contractSource);
 
+    const parsedSource = translator(contractSource);
 
+    console.log('parsed', parsedSource);
 
-    console.log('parsed', "not parsed yet");
-
-    return res.status(200).json({parsedSource: "", contractSource});
+    return res.status(200).json({parsedSource, contractSource});
 
 
   } catch (e: any) {

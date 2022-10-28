@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import Nav from "@/components/Nav";
 import ChatBubble from "@/components/ChatBubble";
 import axios from "axios";
+import {useAccount, Web3Button} from "@web3modal/react";
 
 
 export default function Home() {
@@ -17,9 +18,10 @@ export default function Home() {
   console.log(inView);
   const [contractUrl, setContractUrl] = useState("");
   const [translation, setTranslation] = useState({__html: "Translation goes here"});
-
+  const { account } = useAccount()
 
   function fetchAndSetTranslation() {
+
     if (!contractUrl)
       return console.debug(`No contractURL`);
 
@@ -53,7 +55,8 @@ export default function Home() {
         />
         <ChatBubble side="right" value="Smart What ?!" />
         <p>inView: ${inView}</p>
-        {/* <h1>Home</h1>
+        {/*<h1>Home</h1>
+      <Web3Button />
         <input
           type="url"
           value={contractUrl}
