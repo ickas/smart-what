@@ -3,12 +3,14 @@ import { rem } from "polished";
 export const colors = {
   black: "#000000",
   white: "#ffffff",
+  grey50: "#F1F1F3",
+  grey100: "#E3E3E8",
   purple50: "#ECEAF6",
   purple950: "#070411",
 };
 
 export const global = {
-  backgroundColor: colors.black,
+  backgroundColor: colors.purple950,
   hoverTransitionDuration: "0.3s",
 };
 

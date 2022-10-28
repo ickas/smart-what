@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     background-color: ${global.backgroundColor};
-    padding: ${layout.sidePadding};
     font-family: ${typography.fontFamily};
     font-size: var(--fontSize);
     font-weight: ${typography.fontWeigthRegular};
@@ -33,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
 
   main {
     margin: 0 auto;
+    padding: ${layout.sidePadding};
     max-width: ${layout.contentMaxWidth};
   }
 
