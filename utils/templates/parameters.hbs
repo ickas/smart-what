@@ -1,3 +1,5 @@
-{{#each parameters}}
-    - {{this.name}} ({{this.typeName.name}})
-{{/each}}
+<ul>
+    {{#each parameters}}
+        <li>{{this.name}} ({{this.typeName.name}})</li>
+    {{/each}}
+</ul>
