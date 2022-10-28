@@ -11,7 +11,7 @@ const Nav = (props: NavProps) => {
     <Styles.Wrapper>
       <Styles.Overlay bg={bg}>
         <div>
-          <Logo />
+          <Logo main={!bg} />
         </div>
         <div>
           <Link href="/translations">{pastTransValue}</Link>

@@ -1,17 +1,21 @@
 import { colors } from "@/styles/design-tokens";
 
-export function Logo(props: React.SVGProps<SVGSVGElement>) {
-  const { fill = colors.white } = props;
+interface LogoProps {
+  fill?: React.SVGProps<SVGSVGElement> | any;
+  main?: boolean;
+}
+
+export const Logo = (props: LogoProps) => {
+  const { fill = colors.white, main = false } = props;
 
   return (
-    <svg
-      viewBox="0 0 147 39"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox="0 0 147 39" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        d="M12.57.134C5.94.134.566 5.516.566 12.156v6.302c0 6.64 5.374 12.022 12.002 12.022.107 0 .193.086.193.192v7.378a.814.814 0 001.258.682l12.634-8.252H134.43c6.628 0 12.002-5.383 12.002-12.022v-6.302c0-6.64-5.374-12.022-12.002-12.022H12.569z"
+        d={`M12.57.134C5.94.134.566 5.516.566 12.156v6.302c0 6.64 5.374 12.022 12.002 12.022${
+          main
+            ? ".107 0 .193.086.193.192v7.378a.814.814 0 001.258.682l12.634-8.252H134.43c6.628 0 12.002-5.383 12.002-12.022v-6.302c0-6.64-5.374-12.022-12.002-12.022H12.569z"
+            : "h121.862c6.628 0 12.002-5.383 12.002-12.022v-6.302c0-6.64-5.374-12.022-12.002-12.022H12.569z"
+        }`}
         fill="url(#prefix__paint0_linear_35_44)"
       />
       <path
@@ -34,4 +38,4 @@ export function Logo(props: React.SVGProps<SVGSVGElement>) {
       </defs>
     </svg>
   );
-}
+};

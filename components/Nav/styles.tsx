@@ -32,6 +32,7 @@ export const Overlay = styled.div<OverlayProps>`
     align-items: center;
 
     svg {
+      margin-top: ${rem("8px")};
       width: auto;
       height: ${rem("38px")};
     }
