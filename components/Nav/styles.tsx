@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, global, nav } from "@/styles/design-tokens";
+import { colors, global, nav, typography } from "@/styles/design-tokens";
 
 interface OverlayProps {
   bg?: boolean;
@@ -14,11 +14,9 @@ export const Wrapper = styled.nav`
 
 export const Overlay = styled.div<OverlayProps>`
   --blur: ${(props) => (props.bg ? nav.blur : "none")};
-  border: ${rem("1px")} solid
-    ${(props) => (props.bg ? colors.purple500 : "transparent")};
-  border-radius: 999px;
-  background: ${(props) =>
-    props.bg ? `${colors.purple850}B3` : "transparent"};
+  border: ${rem("1px")} solid ${(props) => (props.bg ? colors.purple500 : "transparent")};
+  border-radius: ${rem("10px")};
+  background: ${(props) => (props.bg ? `${colors.purple850}B3` : "transparent")};
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   display: flex;
@@ -33,6 +31,11 @@ export const Overlay = styled.div<OverlayProps>`
     justify-content: space-between;
     align-items: center;
 
+    svg {
+      width: auto;
+      height: ${rem("38px")};
+    }
+
     a {
       margin-right: ${rem("32px")};
       color: ${colors.purple50};
@@ -42,11 +45,6 @@ export const Overlay = styled.div<OverlayProps>`
       &:hover {
         color: ${colors.grey100};
       }
-    }
-
-    svg {
-      width: auto;
-      height: ${rem("38px")};
     }
   }
 `;

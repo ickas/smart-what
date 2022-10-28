@@ -3,26 +3,17 @@ import Nav from "@/components/Nav";
 import ChatBubble from "@/components/ChatBubble";
 
 export default function Home() {
-
   const { ref, inView } = useInView({
     threshold: 0.8,
   });
 
   return (
     <>
-      <Nav
-        bg={!inView}
-        pastTransValue="Past Translations"
-        buttonValue="Connect Wallet"
-      />
+      <Nav bg={!inView} pastTransValue="Past Translations" />
       <div ref={ref} style={{ height: "130px" }} />
       <main>
-        <ChatBubble
-          side="left"
-          value="It’s a Google Translate for Smart Contracts"
-        />
+        <ChatBubble side="left" value="It’s a Google Translate for Smart Contracts" />
         <ChatBubble side="right" value="Smart What ?!" />
-
 
         {/* <h1>Home</h1>
       <form>
@@ -43,7 +34,6 @@ export default function Home() {
       </form>
       <hr />
       <Translation>translation goes here!</Translation> */}
-
       </main>
     </>
   );
