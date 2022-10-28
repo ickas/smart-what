@@ -11,7 +11,7 @@ const Translation = (props: TranslationProps) => {
 
   const [contractUrl, setContractUrl] = useState("");
   const [translation, setTranslation] = useState({__html: "Translation goes here"});
-  const { account } = useAccount()
+  const { account } = useAccount();
 
   function fetchAndSetTranslation() {
 
@@ -34,6 +34,18 @@ const Translation = (props: TranslationProps) => {
       });
   }
 
+  function saveCurrentTranslation() {
+    if (!translation) {
+      console.debug(`Missing translation`)
+      return;
+    }
+
+    const previous = JSON.parse(localStorage.getItem('translations') || '{}');
+    const newState = {...previous, [contractUrl]: {customName: '', translation}};
+
+    localStorage.setItem('translations', JSON.stringify(newState));
+  }
+
   return <div>
     <input
       type="url"
@@ -41,6 +53,7 @@ const Translation = (props: TranslationProps) => {
       onChange={(evt) => {setContractUrl(evt.target.value);}} />
 
     <button onClick={() => { fetchAndSetTranslation(); }}>translate</button>
+    <button onClick={() => { saveCurrentTranslation(); }}>Save translation</button>
 
     <pre dangerouslySetInnerHTML={translation}></pre>
 
