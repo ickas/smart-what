@@ -1,0 +1,10 @@
+A function with the name {{name}} {{#if returnParameters.length}}that returns{{#each returnParameters}} {{this.name}} ({{this.typeName.name}}){{#unless @last}}, {{/unless}} {{/each}}{{/if}}
+{{#if parameters}}  - with parameters
+{{parameters}}
+{{/if}}
+{{#if modifiers}}
+{{modifiers}}
+{{/if}}
+{{#if body}}
+{{body}}
+{{/if}}

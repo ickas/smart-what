@@ -1,0 +1,4 @@
+is modified by
+{{#each modifiers}}
+  executing {{this.name}} {{#if this.arguments.length}}with arguments {{#each this.arguments}}{{this.name}} {{this.typeDescriptions.typeString}}, {{/each}}{{/if}}
+{{/each}}

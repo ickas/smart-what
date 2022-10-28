@@ -1,11 +1,11 @@
-import Button from "@/components/Button";
 import { Logo } from "utils/brand";
 import { NavProps } from "./types";
 import * as Styles from "./styles";
 import Link from "next/link";
+import {Web3Button} from "@web3modal/react";
 
 const Nav = (props: NavProps) => {
-  const { bg = false, buttonValue = "", pastTransValue = "" } = props;
+  const { bg = false, pastTransValue = "" } = props;
 
   return (
     <Styles.Wrapper>
@@ -15,12 +15,7 @@ const Nav = (props: NavProps) => {
         </div>
         <div>
           <Link href="/translations">{pastTransValue}</Link>
-          <Button
-            value={buttonValue}
-            onClick={() => {
-              console.log("open wallet");
-            }}
-          />
+          <Web3Button />
         </div>
       </Styles.Overlay>
     </Styles.Wrapper>

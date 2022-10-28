@@ -1,0 +1,3 @@
+if {{left}} {{operator}} {{right}} do
+{{#if trueBody}}{{trueBody}}{{/if}}
+{{#if falseBody}}{{#if trueBody}}else, {{/if}}{{falseBody}}{{/if}}
