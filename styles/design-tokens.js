@@ -3,6 +3,8 @@ import { rem } from "polished";
 export const colors = {
   black: "#000000",
   white: "#ffffff",
+  purple50: "#ECEAF6",
+  purple950: "#070411",
 };
 
 export const global = {
@@ -21,8 +23,8 @@ export const device = {
 };
 
 export const layout = {
-  contentMaxWidth: rem("1344px"),
-  sidePadding: rem("16px"),
+  contentMaxWidth: rem("1140px"),
+  sidePadding: rem("20px"),
 };
 
 export const typography = {
@@ -37,4 +39,12 @@ export const typography = {
   fontWeigthExtraBold: 800,
   fontWeigthBlack: 900,
   fontSize: rem("16px"),
+};
+
+export const chatBubble = {
+  borderRadius: rem("30px"),
+  padding: rem("30px"),
+  fontSize: rem("34px"),
+  triangleMargin: rem("34px"),
+  triangleSize: rem("26px"),
 };

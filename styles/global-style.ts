@@ -12,11 +12,6 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --fontSize: ${typography.fontSize};
     --sidePadding: ${layout.sidePadding};
-
-    @media ${device.s} {
-      --fontSize: ${rem("20px")};
-      --sidePadding: calc(${layout.sidePadding} * 3);
-    }
   }
 
   html {
@@ -27,12 +22,18 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     background-color: ${global.backgroundColor};
+    padding: ${layout.sidePadding};
     font-family: ${typography.fontFamily};
     font-size: var(--fontSize);
     font-weight: ${typography.fontWeigthRegular};
     font-feature-settings: 'ss04' on;
     color: ${colors.white};
     overflow-x: hidden;
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: ${layout.contentMaxWidth};
   }
 
   .sr-only {

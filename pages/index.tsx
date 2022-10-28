@@ -1,16 +1,22 @@
-import Link from "next/link";
-import { useState } from "react";
-import Translation from "./components/Translation";
+// import Link from "next/link";
+// import { useState } from "react";
+import ChatBubble from "../components/ChatBubble";
+// import Translation from "../components/Translation";
 
 export default function Home() {
-  const [contractUrl, setContractUrl] = useState("");
+  // const [contractUrl, setContractUrl] = useState("");
 
   return (
-    <div>
-      <Link href="/translations">
+    <main>
+      {/* <Link href="/translations">
         <span>My Translations</span>
-      </Link>
-      <h1>Home</h1>
+      </Link> */}
+      <ChatBubble
+        side="left"
+        value="It’s a Google Translate for Smart Contracts"
+      />
+      <ChatBubble side="right" value="Smart What ?!" />
+      {/* <h1>Home</h1>
       <form>
         <input
           type="url"
@@ -28,7 +34,7 @@ export default function Home() {
         </button>
       </form>
       <hr />
-      <Translation>translation goes here!</Translation>
-    </div>
+      <Translation>translation goes here!</Translation> */}
+    </main>
   );
 }
