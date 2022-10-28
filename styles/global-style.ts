@@ -32,8 +32,9 @@ const GlobalStyle = createGlobalStyle`
 
   main {
     margin: 0 auto;
-    padding: ${layout.sidePadding};
+    padding: ${rem("130px")} ${layout.sidePadding} 0 ${layout.sidePadding};
     max-width: ${layout.contentMaxWidth};
+    height: 200vh;
   }
 
   .sr-only {

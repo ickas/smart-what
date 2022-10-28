@@ -1,20 +1,32 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, global } from "@/styles/design-tokens";
+import { colors, global, nav } from "@/styles/design-tokens";
+
+interface OverlayProps {
+  bg?: boolean;
+}
 
 export const Wrapper = styled.nav`
-  border: 1px solid red;
+  position: fixed;
+  width: 100%;
   padding: ${rem("20px")} ${rem("40px")};
 `;
 
-export const Overlay = styled.div`
-  border: 1px solid blue;
+export const Overlay = styled.div<OverlayProps>`
+  --blur: ${(props) => (props.bg ? nav.blur : "none")};
+  border: ${(props) =>
+    props.bg ? `${rem("1px")} solid ${colors.purple500}` : 0};
+  border-radius: 999px;
+  background: ${(props) =>
+    props.bg ? `${colors.purple850}B3` : "transparent"};
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 ${rem("8px")};
 
   > div {
-    border: 1px solid yellow;
     height: 68px;
     display: flex;
     justify-content: space-between;

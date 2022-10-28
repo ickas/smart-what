@@ -5,11 +5,11 @@ import * as Styles from "./styles";
 import Link from "next/link";
 
 const Nav = (props: NavProps) => {
-  const { buttonValue = "", pastTransValue = "" } = props;
+  const { bg = false, buttonValue = "", pastTransValue = "" } = props;
 
   return (
     <Styles.Wrapper>
-      <Styles.Overlay>
+      <Styles.Overlay bg={bg}>
         <div>
           <Logo />
         </div>

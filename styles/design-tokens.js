@@ -6,6 +6,8 @@ export const colors = {
   grey50: "#F1F1F3",
   grey100: "#E3E3E8",
   purple50: "#ECEAF6",
+  purple500: "#4329A6",
+  purple850: "#140C32",
   purple950: "#070411",
 };
 
@@ -27,6 +29,10 @@ export const device = {
 export const layout = {
   contentMaxWidth: rem("1140px"),
   sidePadding: rem("20px"),
+};
+
+export const nav = {
+  blur: "blur(20px)",
 };
 
 export const typography = {
