@@ -1,4 +1,4 @@
-import {ReactNode, useState} from "react";
+import {ReactNode, useEffect, useState} from "react";
 import {useAccount} from "@web3modal/react";
 import axios from "axios";
 
@@ -6,12 +6,17 @@ interface TranslationProps {
   children: ReactNode;
 }
 
+
+
 const Translation = (props: TranslationProps) => {
   const { children } = props;
 
   const [contractUrl, setContractUrl] = useState("");
   const [translation, setTranslation] = useState({__html: "Translation goes here"});
   const { account } = useAccount();
+  const [web3storageKey,] = useState(process.env.NEXT_PUBLIC_WEB3_STORAGE_API_KEY);
+
+  useEffect(() => { console.log('key',web3storageKey); } ,[])
 
   function fetchAndSetTranslation() {
 
