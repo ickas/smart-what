@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import Nav from "@/components/Nav";
 import TranslationsList from "@/components/TranslationsList";
 import Footer from "@/components/Footer";
+import Drawer from "@/components/Drawer";
 
 export default function Translations() {
   const [translations, setTranslations] = useState<{ file: string; value: any }[]>([]);
@@ -12,8 +13,6 @@ export default function Translations() {
   const { ref, inView } = useInView({
     threshold: 0.8,
   });
-
-  console.log("CENAS", currentTranslation);
 
   function fetchFromStorage() {
     const value = JSON.parse(localStorage.getItem("translations") || "{}");
@@ -54,7 +53,7 @@ export default function Translations() {
         </h1>
         <ul>
           {translations.map(({ file }, i) => (
-            <li>
+            <li key={i}>
               <button
                 onClick={() => {
                   selectTranslation(i);
@@ -67,6 +66,16 @@ export default function Translations() {
         </ul>
       </TranslationsList>
       <Footer />
+      {console.log(currentTranslation.__html)}
+      {currentTranslation.__html && (
+        <Drawer
+          isShowing={!!currentTranslation}
+          close={() => {
+            setCurrentTransaltion({ __html: "" });
+          }}
+          translation={currentTranslation}
+        />
+      )}
     </>
   );
 }

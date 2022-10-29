@@ -18,7 +18,11 @@ export default function Footer() {
             <Link href="https://twitter.com/henriquesilvaog" target="_blank">
               @henriquesilvaog
             </Link>
-            , Mosh &{" "}
+            ,{" "}
+            <Link href="https://twitter.com/moshmage" target="_blank">
+              @moshmage
+            </Link>
+            ,{" "}
             <Link href="https://twitter.com/rodrigosous_a" target="_blank">
               @rodrigosous_a
             </Link>
