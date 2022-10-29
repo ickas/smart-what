@@ -12,6 +12,7 @@ const Nav = (props: NavProps) => {
       <Styles.Overlay bg={bg}>
         <div>
           <Logo main={!bg} />
+          <img src="favicon.svg" alt="" />
         </div>
         <div>
           <Link href={linkUrl}>{linkValue}</Link>

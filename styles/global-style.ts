@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { rem } from 'polished';
-import { layout, colors, typography, device, global } from './design-tokens';
+import { layout, colors, typography, global } from './design-tokens';
 
 const GlobalStyle = createGlobalStyle`
   * {

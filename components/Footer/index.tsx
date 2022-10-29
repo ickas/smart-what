@@ -11,19 +11,23 @@ export default function Footer() {
         <div>
           <span>
             Made with 💜 by{" "}
-            <Link href="https://twitter.com/henriq__e" target="_blank">
+            <Link href="https://twitter.com/henriq__e" target="_blank" rel="noreferrer noopener">
               @henriq__e
             </Link>
             ,{" "}
-            <Link href="https://twitter.com/henriquesilvaog" target="_blank">
+            <Link
+              href="https://twitter.com/henriquesilvaog"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               @henriquesilvaog
             </Link>
-            ,{" "}
-            <Link href="https://twitter.com/moshmage" target="_blank">
-              @moshmage
-            </Link>
-            ,{" "}
-            <Link href="https://twitter.com/rodrigosous_a" target="_blank">
+            , @moshmage ,{" "}
+            <Link
+              href="https://twitter.com/rodrigosous_a"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               @rodrigosous_a
             </Link>
           </span>

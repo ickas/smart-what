@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, global, layout, nav } from "@/styles/design-tokens";
+import { colors, device, global, layout, nav } from "@/styles/design-tokens";
 
 interface OverlayProps {
   bg?: boolean;
@@ -33,9 +33,15 @@ export const Overlay = styled.div<OverlayProps>`
     align-items: center;
 
     svg {
+      display: none;
       margin-top: ${rem("8px")};
       width: auto;
       height: ${rem("38px")};
+    }
+
+    img {
+      width: auto;
+      height: ${rem("40px")};
     }
 
     a {
@@ -46,6 +52,16 @@ export const Overlay = styled.div<OverlayProps>`
 
       &:hover {
         color: ${colors.grey100};
+      }
+    }
+
+    @media (min-width: 550px) {
+      svg {
+        display: inherit;
+      }
+
+      img {
+        display: none;
       }
     }
   }
