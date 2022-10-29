@@ -11,6 +11,8 @@ export default function Home() {
     threshold: 0.8,
   });
 
+  const thumbnail = "/smartwhat-og.jpg";
+
   return (
     <>
       <Head>
@@ -27,7 +29,7 @@ export default function Home() {
         <meta name="googlebot" content="index,follow" />
         <meta property="og:title" content="Smart What ?!" />
         <meta property="og:description" content="Google Translate for Smart Contracts" />
-        <meta property="og:image" content="/smartwhat-og.jpg" />
+        <meta property="og:image" content={thumbnail} />
         <meta property="og:image:alt" content="Smart What ?!" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
@@ -39,7 +41,7 @@ export default function Home() {
           content="Google Translate for Smart Contracts"
         />
         <meta key="twitter:title" name="twitter:title" content="Smart What ?!" />
-        <meta key="twitter:image" name="twitter:image" content="/smartwhat-og.jpg" />
+        <meta key="twitter:image" name="twitter:image" content={thumbnail} />
         <meta property="og:url" content="https://smartwhat.xyz" />
         <link rel="icon" href="favicon.ico" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
