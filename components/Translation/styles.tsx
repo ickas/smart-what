@@ -68,7 +68,7 @@ export const Input = styled.div`
     background: ${colors.purple850}B3;
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
-    width: 100%;
+    width: calc(100% - ${rem("40px")});
     height: ${rem("40px")};
     font-size: ${typography.fontSize};
     color: ${translation.inputColor};
@@ -121,7 +121,7 @@ export const Input = styled.div`
   .clean {
     position: absolute;
     top: ${rem("5px")};
-    right: ${rem("10px")};
+    right: ${rem("30px")};
     width: ${rem("30px")};
     height: ${rem("30px")};
 
@@ -138,7 +138,7 @@ export const Input = styled.div`
 
     @media ${device.s} {
       top: ${rem("20px")};
-      right: ${rem("15px")};
+      right: ${rem("35px")};
       width: ${rem("50px")};
       height: ${rem("50px")};
 

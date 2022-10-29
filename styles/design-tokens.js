@@ -74,7 +74,7 @@ export const translation = {
   titleFontSize: rem("60px"),
   subtitleColor: colors.purple200,
   inputHeight: rem("90px"),
-  inputFontSize: rem("26px"),
+  inputFontSize: rem("18px"),
   inputColor: colors.purple50,
   inputPlaceholderColor: colors.purple700,
 };
