@@ -6,8 +6,11 @@ export const colors = {
   grey50: "#F1F1F3",
   grey100: "#E3E3E8",
   purple50: "#ECEAF6",
+  purple200: "#B4A9DB",
   purple500: "#4329A6",
+  purple700: "#281964",
   purple850: "#140C32",
+  purple900: "#0D0821",
   purple950: "#070411",
 };
 

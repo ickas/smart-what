@@ -10,6 +10,7 @@ export const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
   padding: ${rem("20px")} ${rem("40px")};
+  z-index: 2;
 `;
 
 export const Overlay = styled.div<OverlayProps>`
