@@ -9,7 +9,7 @@ interface OverlayProps {
 export const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
-  padding: ${rem("20px")} ${rem("40px")};
+  padding: ${global.defaultMargin} ${rem("40px")};
   z-index: 2;
 `;
 

@@ -20,6 +20,7 @@ export const colors = {
 export const global = {
   backgroundColor: colors.purple950,
   hoverTransitionDuration: "0.3s",
+  defaultMargin: rem("20px"),
 };
 
 export const device = {
@@ -43,6 +44,7 @@ export const nav = {
 
 export const typography = {
   fontFamily: "'Inter', Verdana, Arial, Helvetica, sans-serif",
+  fontFamilyMono: "'Roboto Mono', monospace, Verdana, Arial, Helvetica, sans-serif",
   fontWeigthThin: 100,
   fontWeigthExtraLight: 200,
   fontWeigthLight: 300,
@@ -61,4 +63,26 @@ export const chatBubble = {
   fontSize: rem("34px"),
   triangleMargin: rem("34px"),
   triangleSize: rem("26px"),
+};
+
+export const translation = {
+  titleFontSize: rem("60px"),
+  subtitleColor: colors.purple200,
+  inputHeight: rem("90px"),
+  inputFontSize: rem("26px"),
+  inputColor: colors.purple50,
+  inputPlaceholderColor: colors.purple700,
+};
+
+export const formatter = {
+  backgroundColor: colors.white,
+  borderColor: colors.purple400,
+  borderRadius: rem("30px"),
+  padding: rem("56px"),
+  color: colors.blue950,
+  saveBackgroundColor: colors.purple850,
+  saveHoverBackgroundColor: colors.purple900,
+  saveHeight: rem("90px"),
+  saveFontSize: rem("26px"),
+  saveColor: colors.white,
 };

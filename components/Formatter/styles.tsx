@@ -1,29 +1,32 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, global } from "@/styles/design-tokens";
+import { formatter, global, typography } from "@/styles/design-tokens";
 
 export const Wrapper = styled.div`
-  margin-top: ${rem("20px")};
-  background-color: ${colors.white};
-  border: ${rem("2px")} solid ${colors.purple400};
-  border-radius: ${rem("30px")};
-  padding: ${rem("56px")};
-  color: ${colors.blue950};
+  margin-top: ${global.defaultMargin};
+  background-color: ${formatter.backgroundColor};
+  border: ${rem("2px")} solid ${formatter.borderColor};
+  border-radius: ${formatter.borderRadius};
+  padding: ${formatter.padding};
+  color: ${formatter.color};
   text-align: left;
 
   & + button {
-    margin-top: ${rem("20px")};
-    background-color: ${colors.purple850};
-    border: ${rem("2px")} solid ${colors.purple400};
-    border-radius: ${rem("30px")};
+    margin-top: ${global.defaultMargin};
+    background-color: ${formatter.saveBackgroundColor};
+    border: ${rem("2px")} solid ${formatter.borderColor};
+    border-radius: ${formatter.borderRadius};
     width: 100%;
-    height: ${rem("90px")};
-    font-size: ${rem("26px")};
-    color: ${colors.white};
+    height: ${formatter.saveHeight};
+    font-size: ${formatter.saveFontSize};
+    color: ${formatter.saveColor};
     transition-duration: ${global.hoverTransitionDuration};
 
     &:hover {
-      background-color: ${colors.purple900};
+      background-color: ${formatter.saveHoverBackgroundColor};
+    }
+  }
+
     }
   }
 `;

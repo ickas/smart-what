@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { nav, colors, global, typography } from "@/styles/design-tokens";
+import { nav, colors, global, typography, translation } from "@/styles/design-tokens";
 
 export const Wrapper = styled.div`
   position: relative;
   margin-left: -5%;
   width: 110%;
   min-height: 200px;
-  border: 1px solid transparent;
+  border: ${rem("1px")} solid transparent;
   background-color: ${global.backgroundColor};
   background-image: url("circle.svg");
   background-size: 110% auto;
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 
   h2 {
     margin: ${rem("100px")} 0 ${rem("40px")} 0;
-    font-size: ${rem("60px")};
+    font-size: ${translation.titleFontSize};
     font-weight: ${typography.fontWeigthMedium};
 
     span {
@@ -45,14 +45,14 @@ export const Wrapper = styled.div`
   }
 
   span {
-    color: ${colors.purple200};
+    color: ${translation.subtitleColor};
   }
 `;
 
 export const Input = styled.div`
   position: relative;
   top: ${rem("108px")};
-  margin-top: ${rem("20px")};
+  margin-top: ${global.defaultMargin};
   position: sticky;
 
   input {
@@ -63,24 +63,24 @@ export const Input = styled.div`
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     width: 100%;
-    height: ${rem("90px")};
+    height: ${translation.inputHeight};
     padding-right: ${rem("80px")};
-    font-size: ${rem("26px")};
-    color: ${colors.purple50};
+    font-size: ${translation.inputFontSize};
+    color: ${translation.inputColor};
     text-align: center;
 
     &::placeholder {
-      color: ${colors.purple700};
+      color: ${translation.inputPlaceholderColor};
       opacity: 1;
     }
 
     &:-ms-input-placeholder {
-      color: ${colors.purple700};
+      color: ${translation.inputPlaceholderColor};
       opacity: 1;
     }
 
     &::-ms-input-placeholder {
-      color: ${colors.purple700};
+      color: ${translation.inputPlaceholderColor};
       opacity: 1;
     }
 
