@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import ChatBubble from "@/components/ChatBubble";
 import Translation from "@/components/Translation";
 import ChatBubbles from "@/components/ChatBubbles";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { ref, inView } = useInView({
@@ -20,6 +21,7 @@ export default function Home() {
         </ChatBubbles>
         <Translation />
       </main>
+      <Footer />
     </>
   );
 }

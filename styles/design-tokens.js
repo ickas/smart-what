@@ -5,7 +5,9 @@ export const colors = {
   white: "#ffffff",
   grey50: "#F1F1F3",
   grey100: "#E3E3E8",
+  blue500: "#4250E4",
   blue950: "#070817",
+  green500: "#35E0AD",
   purple50: "#ECEAF6",
   purple200: "#B4A9DB",
   purple400: "#6954B8",
@@ -14,6 +16,7 @@ export const colors = {
   purple850: "#140C32",
   purple900: "#0D0821",
   purple950: "#070411",
+  orange500: "#FF6A2C",
   red500: "#EB5757",
 };
 
@@ -85,4 +88,11 @@ export const formatter = {
   saveHeight: rem("90px"),
   saveFontSize: rem("26px"),
   saveColor: colors.white,
+  fontFamily: typography.fontFamilyMono,
+  fontSize: typography.fontSize,
+  lineHeight: 1.75,
+  color1: colors.purple500,
+  color2: colors.blue500,
+  color3: colors.orange500,
+  color4: colors.green500,
 };
