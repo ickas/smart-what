@@ -16,7 +16,7 @@ export const Wrapper = styled.nav`
 export const Overlay = styled.div<OverlayProps>`
   --blur: ${(props) => (props.bg ? nav.blur : "none")};
   border: ${rem("1px")} solid ${(props) => (props.bg ? colors.purple500 : "transparent")};
-  border-radius: ${rem("10px")};
+  border-radius: ${rem("17px")};
   background: ${(props) => (props.bg ? `${colors.purple850}B3` : "transparent")};
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);

@@ -21,6 +21,7 @@ export const Loading = styled.div`
 
   @media ${device.s} {
     border: ${rem("10px")} solid hsla(0, 0%, 48%, 0.5);
+    border-top-color: ${colors.purple500};
     width: ${rem("40px")};
     height: ${rem("40px")};
   }
