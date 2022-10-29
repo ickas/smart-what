@@ -1,4 +1,5 @@
 export interface NavProps {
   bg?: boolean,
-  pastTransValue: string,
+  linkUrl: string,
+  linkValue: string,
 }

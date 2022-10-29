@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Web3Button } from "@web3modal/react";
 
 const Nav = (props: NavProps) => {
-  const { bg = false, pastTransValue = "" } = props;
+  const { bg = false, linkUrl = "#0", linkValue = "" } = props;
 
   return (
     <Styles.Wrapper>
@@ -14,7 +14,7 @@ const Nav = (props: NavProps) => {
           <Logo main={!bg} />
         </div>
         <div>
-          <Link href="/translations">{pastTransValue}</Link>
+          <Link href={linkUrl}>{linkValue}</Link>
           <Web3Button />
         </div>
       </Styles.Overlay>
