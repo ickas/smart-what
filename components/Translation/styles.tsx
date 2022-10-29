@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { nav, colors, global, typography, translation } from "@/styles/design-tokens";
+import {
+  layout,
+  nav,
+  colors,
+  global,
+  typography,
+  translation,
+  device,
+} from "@/styles/design-tokens";
 
 export const Wrapper = styled.div`
   position: relative;
-  margin-left: -5%;
-  width: 110%;
   min-height: 200px;
   border: ${rem("1px")} solid transparent;
   background-color: ${global.backgroundColor};
@@ -63,11 +69,16 @@ export const Input = styled.div`
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     width: 100%;
-    height: ${translation.inputHeight};
-    padding-right: ${rem("80px")};
-    font-size: ${translation.inputFontSize};
+    height: ${rem("40px")};
+    font-size: ${typography.fontSize};
     color: ${translation.inputColor};
     text-align: center;
+
+    @media ${device.s} {
+      height: ${translation.inputHeight};
+      padding-right: ${rem("80px")};
+      font-size: ${translation.inputFontSize};
+    }
 
     &::placeholder {
       color: ${translation.inputPlaceholderColor};
@@ -95,26 +106,43 @@ export const Input = styled.div`
 
   .spinner {
     position: absolute;
-    top: ${rem("25px")};
-    right: ${rem("20px")};
+    top: ${rem("10px")};
+    right: ${rem("10px")};
+
+    @media ${device.s} {
+      top: ${rem("25px")};
+      right: ${rem("20px")};
+    }
   }
 
   .clean {
     position: absolute;
-    top: ${rem("20px")};
-    right: ${rem("15px")};
-    width: ${rem("50px")};
-    height: ${rem("50px")};
+    top: ${rem("5px")};
+    right: ${rem("10px")};
+    width: ${rem("30px")};
+    height: ${rem("30px")};
 
     img {
-      width: ${rem("50px")};
-      height: ${rem("50px")};
+      width: ${rem("30px")};
+      height: ${rem("30px")};
     }
 
     & + span {
       display: inline-block;
       margin-top: ${rem("5px")};
       color: ${colors.red500};
+    }
+
+    @media ${device.s} {
+      top: ${rem("20px")};
+      right: ${rem("15px")};
+      width: ${rem("50px")};
+      height: ${rem("50px")};
+
+      img {
+        width: ${rem("50px")};
+        height: ${rem("50px")};
+      }
     }
   }
 `;

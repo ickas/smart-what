@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, global, nav, typography } from "@/styles/design-tokens";
+import { colors, global, layout, nav } from "@/styles/design-tokens";
 
 interface OverlayProps {
   bg?: boolean;
@@ -9,7 +9,7 @@ interface OverlayProps {
 export const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
-  padding: ${global.defaultMargin} ${rem("40px")};
+  padding: ${global.defaultMargin} ${layout.sidePadding};
   z-index: 2;
 `;
 

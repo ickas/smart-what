@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   margin: 0 auto;
   max-width: ${layout.contentMaxWidth};
+  padding: 0 ${layout.sidePadding};
 
   h1 {
     font-size: ${translation.titleFontSize};

@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { rem, timingFunctions } from "polished";
-import { colors, global, formatter } from "@/styles/design-tokens";
+import { colors, global, formatter, device } from "@/styles/design-tokens";
 
 const slideInLeft = keyframes`
   from {
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   top: 0;
   right: 0;
   width: 100%;
-  max-width: 50vw;
+  max-width: 100vw;
   height: 100vh;
   background-color: white;
   padding: 0 ${rem("20px")} ${rem("20px")} ${rem("20px")};
@@ -28,6 +28,10 @@ export const Wrapper = styled.div`
   transform: translateX(100%);
   overflow-y: auto;
   z-index: 3;
+
+  @media ${device.s} {
+    max-width: 50vw;
+  }
 
   button {
     margin-top: ${rem("20px")};
