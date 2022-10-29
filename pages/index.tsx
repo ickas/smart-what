@@ -27,27 +27,35 @@ export default function Home() {
         <meta name="googlebot" content="index,follow" />
         <meta property="og:title" content="Smart What ?!" />
         <meta property="og:description" content="Google Translate for Smart Contracts" />
-        <meta property="og:image" content="smartwhat-og.jpg" />
+        <meta property="og:image" content="/smartwhat-og.jpg" />
         <meta property="og:image:alt" content="Smart What ?!" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:site" name="twitter:site" content="@ETHLisbon" />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content="Google Translate for Smart Contracts"
+        />
+        <meta key="twitter:title" name="twitter:title" content="Smart What ?!" />
+        <meta key="twitter:image" name="twitter:image" content="/smartwhat-og.jpg" />
         <meta property="og:url" content="https://smartwhat.xyz" />
         <link rel="icon" href="favicon.ico" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-        <link rel="icon" sizes="192x192" type="image/png" href="webapp/android-icon-192x192.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="webapp/apple-icon-180x180.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="webapp/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="webapp/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="webapp/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="webapp/apple-icon-114x114.png" />
-        <link rel="icon" sizes="96x96" type="image/png" href="webapp/favicon-96x96.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="webapp/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="webapp/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="webapp/apple-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="webapp/apple-icon-57x57.png" />
-        <link rel="icon" sizes="32x32" type="image/png" href="webapp/favicon-32x32.png" />
-        <link rel="icon" sizes="16x16" type="image/png" href="webapp/favicon-16x16.png" />
+        <link rel="icon" sizes="192x192" type="image/png" href="/webapp/android-icon-192x192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/webapp/apple-icon-180x180.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/webapp/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/webapp/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/webapp/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/webapp/apple-icon-114x114.png" />
+        <link rel="icon" sizes="96x96" type="image/png" href="/webapp/favicon-96x96.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/webapp/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/webapp/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/webapp/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/webapp/apple-icon-57x57.png" />
+        <link rel="icon" sizes="32x32" type="image/png" href="/webapp/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" type="image/png" href="/webapp/favicon-16x16.png" />
       </Head>
       <Nav bg={!inView} linkUrl="/translations" linkValue="Past Translations" />
       <div ref={ref} style={{ height: "130px" }} />
