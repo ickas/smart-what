@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   background-size: 70% auto;
   background-repeat: no-repeat;
   background-position: center 0px;
-  padding: ${rem("100px")} 0;
+  padding: ${rem("60px")} 0;
 
   @media ${device.s} {
     padding: ${rem("160px")} 0;

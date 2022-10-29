@@ -84,7 +84,7 @@ export const Wrapper = styled.div`
 
     .loading {
       min-width: ${rem("100px")};
-      height: ${rem("32px")};
+      height: ${rem("24.5px")};
       visibility: visible;
       display: flex;
       justify-content: center;
@@ -93,7 +93,7 @@ export const Wrapper = styled.div`
       animation-name: ${hideLoading};
 
       @media ${device.s} {
-        height: ${rem("41.5px")};
+        height: ${rem("32px")};
       }
 
       .circle {
@@ -120,14 +120,14 @@ export const Wrapper = styled.div`
 
 export const Bubble = styled.div<ChatBubbleProps>`
   width: max-content;
-  max-width: 80%;
+  max-width: 85%;
   border-radius: ${chatBubble.borderRadius};
   background-image: ${(props) =>
     props.side === "left"
       ? "linear-gradient(180deg, #dfd6ff 0%, #fff 100%)"
       : "linear-gradient(180deg, #4329A6 0%, #5736D9 0.01%, #4329A6 78.35%)"};
   padding: ${chatBubble.padding};
-  font-size: ${rem("26px")};
+  font-size: ${rem("20px")};
   font-weight: ${typography.fontWeigthMedium};
   color: ${(props) => (props.side === "left" ? colors.purple950 : colors.purple50)};
   align-self: ${(props) => (props.side === "left" ? "flex-start" : "flex-end")};

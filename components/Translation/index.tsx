@@ -100,10 +100,18 @@ const Translation = () => {
               setTranslation({ __html: "" });
             }}
           >
-            <img src="close.svg" />
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M25 7L7 25M25 25L7 7"
+                stroke={contractUrl && error ? "#EB5757" : "#4329A6"}
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         )}
-        {error && contractUrl && <span>{error}</span>}
+        {!loading && error && contractUrl && <span>{error}</span>}
       </Styles.Input>
 
       {translation.__html && (

@@ -63,7 +63,7 @@ export const Input = styled.div`
 
   input {
     --blur: ${nav.blur};
-    border: ${rem("2px")} solid ${colors.purple500};
+    border: ${rem("1px")} solid ${colors.purple500};
     border-radius: ${rem("20px")};
     background: ${colors.purple850}B3;
     backdrop-filter: var(--blur);
@@ -75,6 +75,7 @@ export const Input = styled.div`
     text-align: center;
 
     @media ${device.s} {
+      border: ${rem("2px")} solid ${colors.purple500};
       height: ${translation.inputHeight};
       padding-right: ${rem("80px")};
       font-size: ${translation.inputFontSize};
@@ -101,6 +102,8 @@ export const Input = styled.div`
 
     &.error {
       border-color: ${colors.red500};
+      background: ${colors.red950};
+      color: ${colors.red500};
     }
   }
 

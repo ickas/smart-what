@@ -19,6 +19,7 @@ export const colors = {
   purple950: "#070411",
   orange500: "#FF6A2C",
   red500: "#EB5757",
+  red950: "#180909",
 };
 
 export const global = {
@@ -64,7 +65,7 @@ export const typography = {
 export const chatBubble = {
   borderRadius: rem("30px"),
   padding: rem("30px"),
-  fontSize: rem("34px"),
+  fontSize: rem("26px"),
   triangleMargin: rem("34px"),
   triangleSize: rem("26px"),
 };
