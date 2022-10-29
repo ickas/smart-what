@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import { Web3Modal } from "@web3modal/react";
 
 const config = {
-  projectId: "601ec3cfd302dae1a73c9b2a30f7f963",
+  projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_APP_ID!,
   theme: "dark",
   accentColor: "blackWhite",
   ethereum: {

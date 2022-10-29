@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import Nav from "@/components/Nav";
 import ChatBubble from "@/components/ChatBubble";
+import Translation from "@/components/Translation";
 
 export default function Home() {
   const { ref, inView } = useInView({
