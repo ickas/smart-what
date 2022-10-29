@@ -1,11 +1,121 @@
-import styled from "styled-components";
-import { rem } from "polished";
+import styled, { keyframes } from "styled-components";
+import { rem, timingFunctions } from "polished";
 import { chatBubble, colors, device, typography } from "@/styles/design-tokens";
 import { ChatBubbleProps } from "./types";
+
+const slideInTop = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const showValue = keyframes`
+  from {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    visibility: visible;
+    position: inherit;
+    width: auto;
+    height: auto;
+  }
+`;
+
+const hideLoading = keyframes`
+  from {
+    visibility: visible;
+    width: auto;
+    height: auto;
+  }
+
+  to {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+`;
+
+const loading = keyframes`
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+`;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  animation-timing-function: ${timingFunctions("easeOutQuint")};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: ${slideInTop};
+  transform: translateX(100%);
+
+  &:last-child {
+    animation-delay: 1s;
+
+    .value {
+      width: 0;
+      height: 0;
+      position: absolute;
+      visibility: hidden;
+      animation-delay: 2.5s;
+      animation-fill-mode: forwards;
+      animation-name: ${showValue};
+      overflow: hidden;
+    }
+
+    .loading {
+      min-width: ${rem("100px")};
+      height: ${rem("32px")};
+      visibility: visible;
+      display: flex;
+      justify-content: center;
+      animation-delay: 2.5s;
+      animation-fill-mode: forwards;
+      animation-name: ${hideLoading};
+
+      @media ${device.s} {
+        height: ${rem("41.5px")};
+      }
+
+      .circle {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background-color: ${colors.purple700};
+
+        &:nth-last-child(1) {
+          animation: ${loading} 0.6s 0.1s linear infinite;
+        }
+        &:nth-last-child(2) {
+          margin: 0 3px;
+          animation: ${loading} 0.6s 0.2s linear infinite;
+        }
+        &:nth-last-child(3) {
+          animation: ${loading} 0.6s 0.3s linear infinite;
+        }
+      }
+    }
+  }
 `;
 
 export const Bubble = styled.div<ChatBubbleProps>`

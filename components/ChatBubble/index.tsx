@@ -7,7 +7,12 @@ const ChatBubble = (props: ChatBubbleProps) => {
   return (
     <Styles.Wrapper>
       <Styles.Bubble side={side}>
-        <span>{value}</span>
+        <span className="value">{value}</span>
+        <div className="loading">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
       </Styles.Bubble>
       <div />
     </Styles.Wrapper>
