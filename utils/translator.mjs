@@ -18,8 +18,8 @@ export default function translator(source = '') {
     }
   });
 
-  writeFileSync('dump.json', JSON.stringify(nodes, null, 2))
-  writeFileSync('dump.txt', _return.join(`\r\n`))
+  //writeFileSync('dump.json', JSON.stringify(nodes, null, 2))
+  //writeFileSync('dump.txt', _return.join(`\r\n`))
 
 
 
