@@ -14,11 +14,11 @@ async function post(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     const contractSource = await axios.get<string>(new URL(req.body.url).toString()).then(({data}) => data);
-    console.log('source!', contractSource);
+    //console.log('source!', contractSource);
 
     const parsedSource = translator(contractSource);
 
-    console.log('parsed', parsedSource);
+    //console.log('parsed', parsedSource);
 
     return res.status(200).json({parsedSource, contractSource});
 
