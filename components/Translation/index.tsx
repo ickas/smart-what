@@ -109,7 +109,7 @@ const Translation = () => {
       {translation.__html && (
         <>
           <Formatter>
-            <div dangerouslySetInnerHTML={translation}></div>
+            <pre dangerouslySetInnerHTML={translation}></pre>
           </Formatter>
           <button
             onClick={() => {
