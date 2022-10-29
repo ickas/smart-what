@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, global, typography } from "@/styles/design-tokens";
+import { nav, colors, global, typography } from "@/styles/design-tokens";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -51,12 +51,17 @@ export const Wrapper = styled.div`
 
 export const Input = styled.div`
   position: relative;
+  top: ${rem("108px")};
   margin-top: ${rem("20px")};
+  position: sticky;
 
   input {
+    --blur: ${nav.blur};
     border: ${rem("2px")} solid ${colors.purple500};
     border-radius: ${rem("20px")};
-    background-color: ${colors.purple900};
+    background: ${colors.purple850}B3;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
     width: 100%;
     height: ${rem("90px")};
     padding-right: ${rem("80px")};

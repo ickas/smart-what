@@ -4,6 +4,7 @@ import axios from "axios";
 import * as Styles from "./styles";
 import { Web3Storage } from "web3.storage";
 import Spinner from "@/components/Spinner";
+import Formatter from "@/components/Formatter";
 
 const Translation = () => {
   const [contractUrl, setContractUrl] = useState("");
@@ -114,7 +115,11 @@ const Translation = () => {
         Save translation
       </button> */}
 
-      <div dangerouslySetInnerHTML={translation}></div>
+      {translation.__html && (
+        <Formatter>
+          <div dangerouslySetInnerHTML={translation}></div>
+        </Formatter>
+      )}
     </Styles.Wrapper>
   );
 };
