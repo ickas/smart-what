@@ -103,12 +103,8 @@ export const Input = styled.div`
     position: absolute;
     top: ${rem("20px")};
     right: ${rem("15px")};
-    border: 0;
-    padding: 0;
     width: ${rem("50px")};
     height: ${rem("50px")};
-    background-color: transparent;
-    cursor: pointer;
 
     img {
       width: ${rem("50px")};

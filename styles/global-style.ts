@@ -42,6 +42,13 @@ const GlobalStyle = createGlobalStyle`
     font-weight: ${typography.fontWeigthMedium};
   }
 
+  button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
   .sr-only {
     position: absolute !important;
     margin: 0;

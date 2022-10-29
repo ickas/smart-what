@@ -106,19 +106,19 @@ const Translation = () => {
         {error && contractUrl && <span>{error}</span>}
       </Styles.Input>
 
-      {/*
-      <button
-        onClick={() => {
-          saveCurrentTranslation();
-        }}
-      >
-        Save translation
-      </button> */}
-
       {translation.__html && (
-        <Formatter>
-          <div dangerouslySetInnerHTML={translation}></div>
-        </Formatter>
+        <>
+          <Formatter>
+            <div dangerouslySetInnerHTML={translation}></div>
+          </Formatter>
+          <button
+            onClick={() => {
+              saveCurrentTranslation();
+            }}
+          >
+            Save to my translations
+          </button>
+        </>
       )}
     </Styles.Wrapper>
   );
