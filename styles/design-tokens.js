@@ -12,6 +12,7 @@ export const colors = {
   purple850: "#140C32",
   purple900: "#0D0821",
   purple950: "#070411",
+  red500: "#EB5757",
 };
 
 export const global = {

@@ -47,14 +47,19 @@ export const Wrapper = styled.div`
   span {
     color: ${colors.purple200};
   }
+`;
+
+export const Input = styled.div`
+  position: relative;
+  margin-top: ${rem("20px")};
 
   input {
-    margin-top: ${rem("20px")};
-    border: 2px solid ${colors.purple500};
+    border: ${rem("2px")} solid ${colors.purple500};
     border-radius: ${rem("20px")};
     background-color: ${colors.purple900};
     width: 100%;
     height: ${rem("90px")};
+    padding-right: ${rem("80px")};
     font-size: ${rem("26px")};
     color: ${colors.purple50};
     text-align: center;
@@ -72,6 +77,43 @@ export const Wrapper = styled.div`
     &::-ms-input-placeholder {
       color: ${colors.purple700};
       opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.error {
+      border-color: ${colors.red500};
+    }
+  }
+
+  .spinner {
+    position: absolute;
+    top: ${rem("25px")};
+    right: ${rem("20px")};
+  }
+
+  .clean {
+    position: absolute;
+    top: ${rem("20px")};
+    right: ${rem("15px")};
+    border: 0;
+    padding: 0;
+    width: ${rem("50px")};
+    height: ${rem("50px")};
+    background-color: transparent;
+    cursor: pointer;
+
+    img {
+      width: ${rem("50px")};
+      height: ${rem("50px")};
+    }
+
+    & + span {
+      display: inline-block;
+      margin-top: ${rem("5px")};
+      color: ${colors.red500};
     }
   }
 `;

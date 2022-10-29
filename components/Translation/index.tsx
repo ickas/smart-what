@@ -1,26 +1,32 @@
-import { ReactNode, useState } from "react";
+import { useState, useEffect } from "react";
 import { useAccount } from "@web3modal/react";
 import axios from "axios";
 import * as Styles from "./styles";
 import { Web3Storage } from "web3.storage";
+import Spinner from "@/components/Spinner";
 
-interface TranslationProps {
-  children: ReactNode;
-}
-
-const Translation = (props: TranslationProps) => {
-  const { children } = props;
-
+const Translation = () => {
   const [contractUrl, setContractUrl] = useState("");
-  const [translation, setTranslation] = useState({ __html: "Translation goes here" });
+  const [translation, setTranslation] = useState({ __html: "" });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const { account } = useAccount();
   const [web3storageKey] = useState(process.env.NEXT_PUBLIC_WEB3_STORAGE_API_KEY);
   const [web3Storage] = useState(new Web3Storage({ token: web3storageKey! }));
 
-  function fetchAndSetTranslation() {
-    if (!contractUrl) return console.debug(`No contractURL`);
+  useEffect(() => {
+    if (contractUrl) {
+      setLoading(true);
+      setTimeout(fetchAndSetTranslation, 2000);
+    }
+  }, [contractUrl]);
 
-    console.log(`url`, contractUrl);
+  function fetchAndSetTranslation() {
+    if (!contractUrl) {
+      setLoading(false);
+      setError("No contract URL");
+      return console.debug(`No contractURL`);
+    }
 
     axios
       .post(`api/translate`, { url: contractUrl })
@@ -30,8 +36,14 @@ const Translation = (props: TranslationProps) => {
         console.debug(`parsedSource`, parsedSource);
         return { __html: parsedSource };
       })
-      .then((parsedSource) => setTranslation(parsedSource))
+      .then((parsedSource) => {
+        setError("");
+        setLoading(false);
+        setTranslation(parsedSource);
+      })
       .catch((e) => {
+        setLoading(false);
+        setError("Error fetching translation");
         console.debug(`Error while fetching translation`, e?.message || e?.toString());
         return "Error fetching translation";
       });
@@ -66,22 +78,34 @@ const Translation = (props: TranslationProps) => {
         Try it <span>here</span>
       </h2>
       <span>Paste your smart contract</span>
-      <input
-        type="url"
-        placeholder="https://example.xyz/smart-contract.sol"
-        value={contractUrl}
-        onChange={(evt) => {
-          setContractUrl(evt.target.value);
-        }}
-      />
 
-      {/*  <button
-        onClick={() => {
-          fetchAndSetTranslation();
-        }}
-      >
-        translate
-      </button>
+      <Styles.Input>
+        <input
+          className={contractUrl && error ? "error" : undefined}
+          type="url"
+          placeholder="https://example.xyz/smart-contract.sol"
+          value={contractUrl}
+          onChange={(evt) => {
+            setContractUrl(evt.target.value);
+          }}
+        />
+        {loading && <Spinner />}
+        {!loading && contractUrl && (
+          <button
+            className="clean"
+            onClick={() => {
+              setError("");
+              setContractUrl("");
+              setTranslation({ __html: "" });
+            }}
+          >
+            <img src="close.svg" />
+          </button>
+        )}
+        {error && contractUrl && <span>{error}</span>}
+      </Styles.Input>
+
+      {/*
       <button
         onClick={() => {
           saveCurrentTranslation();
@@ -90,7 +114,7 @@ const Translation = (props: TranslationProps) => {
         Save translation
       </button> */}
 
-      {/* <div dangerouslySetInnerHTML={translation}></div> */}
+      <div dangerouslySetInnerHTML={translation}></div>
     </Styles.Wrapper>
   );
 };

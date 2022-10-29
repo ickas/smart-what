@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     padding: 0 ${layout.sidePadding};
     max-width: ${layout.contentMaxWidth};
-    height: 200vh;
+    padding-bottom: ${rem("300px")};
   }
 
   h1, h2 {
