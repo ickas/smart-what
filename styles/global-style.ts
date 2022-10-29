@@ -37,6 +37,11 @@ const GlobalStyle = createGlobalStyle`
     height: 200vh;
   }
 
+  h1, h2 {
+    margin: 0;
+    font-weight: ${typography.fontWeigthMedium};
+  }
+
   .sr-only {
     position: absolute !important;
     margin: 0;

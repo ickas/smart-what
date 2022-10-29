@@ -18,6 +18,7 @@ export default function Home() {
           <ChatBubble side="left" value="It’s a Google Translate for Smart Contracts" />
           <ChatBubble side="right" value="Smart What ?!" />
         </ChatBubbles>
+        <Translation>translation goes here!</Translation>
       </main>
     </>
   );
