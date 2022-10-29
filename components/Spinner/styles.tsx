@@ -12,7 +12,7 @@ const rotation = keyframes`
 `;
 
 export const Loading = styled.div`
-  border: ${rem("5px")} solid hsla(0, 0%, 48%, 0.5);
+  border: ${rem("5px")} solid ${colors.purple700};
   border-top-color: ${colors.purple500};
   border-radius: 999px;
   width: ${rem("20px")};

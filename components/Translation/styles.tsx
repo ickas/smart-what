@@ -110,11 +110,11 @@ export const Input = styled.div`
   .spinner {
     position: absolute;
     top: ${rem("10px")};
-    right: ${rem("10px")};
+    right: ${rem("30px")};
 
     @media ${device.s} {
       top: ${rem("25px")};
-      right: ${rem("20px")};
+      right: ${rem("40px")};
     }
   }
 
