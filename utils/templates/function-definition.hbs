@@ -1,5 +1,5 @@
-<p>A function with the name <span class="color1">{{name}}</span> {{#if returnParameters.length}}that returns{{#each returnParameters}} <span class="color2">{{this.name}} ({{this.typeName.name}})</span>{{#unless @last}}, {{/unless}} {{/each}}{{/if}}</p>
-{{#if parameters}}<p>with parameters</p>
+{{#if name}}A function with the name <span class="color1">{{name}}</span>{{/if}}{{#unless name}}A constructor{{/unless}} {{#if returnParameters.length}}that returns{{#each returnParameters}} <span class="color2">{{this.name}} ({{this.typeName.name}})</span>{{#unless @last}}, {{/unless}} {{/each}}{{/if}}
+{{#if parameters}}with parameters
 {{parameters}}
 {{/if}}
 {{#if modifiers}}

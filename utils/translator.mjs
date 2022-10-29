@@ -5,7 +5,7 @@ import {writeFileSync} from "fs";
 export default function translator(source = '') {
 
   const ast = parser.parse(source);
-  let _return = ``;
+  let _return = [];
   let nodes = [];
   parser.visit(ast, {
     ContractDefinition: (node) => {
@@ -13,12 +13,15 @@ export default function translator(source = '') {
       //contractDefinition(node);
     },
     'FunctionDefinition': (node) => {
-      _return += functionDefinition(node);
+      _return.push(functionDefinition(node));
       nodes.push(node);
     }
   });
 
   writeFileSync('dump.json', JSON.stringify(nodes, null, 2))
+  writeFileSync('dump.txt', _return.join(`\r\n`))
 
-  return _return;
+
+
+  return _return.join(`\r\n`);
 }
