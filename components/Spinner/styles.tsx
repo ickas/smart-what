@@ -20,7 +20,7 @@ export const Loading = styled.div`
   animation: ${rotation} 0.8s ease infinite;
 
   @media ${device.s} {
-    border: ${rem("10px")} solid hsla(0, 0%, 48%, 0.5);
+    border: ${rem("10px")} solid ${colors.purple700};
     border-top-color: ${colors.purple500};
     width: ${rem("40px")};
     height: ${rem("40px")};

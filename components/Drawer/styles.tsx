@@ -19,7 +19,8 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 100vw;
   height: 100vh;
-  background-color: white;
+  border-left: ${rem("1px")} solid ${colors.purple500};
+  background-color: ${colors.purple850};
   padding: 0 ${rem("20px")} ${rem("20px")} ${rem("20px")};
   animation-timing-function: ${timingFunctions("easeOutQuint")};
   animation-duration: 1s;
@@ -32,6 +33,11 @@ export const Wrapper = styled.div`
   @media ${device.s} {
     max-width: 50vw;
   }
+`;
+
+export const CloseButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
 
   button {
     margin-top: ${rem("20px")};

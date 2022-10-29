@@ -11,23 +11,27 @@ const Drawer = (props: DrawerProps) => {
     ReactDOM.createPortal(
       <React.Fragment>
         <Styles.Wrapper>
-          <button
-            onClick={() => {
-              close();
-            }}
-          >
-            Close
-          </button>
+          <Styles.CloseButton>
+            <button
+              onClick={() => {
+                close();
+              }}
+            >
+              Close
+            </button>
+          </Styles.CloseButton>
           <Formatter>
             <pre dangerouslySetInnerHTML={translation}></pre>
           </Formatter>
-          <button
-            onClick={() => {
-              close();
-            }}
-          >
-            Close
-          </button>
+          <Styles.CloseButton>
+            <button
+              onClick={() => {
+                close();
+              }}
+            >
+              Close
+            </button>
+          </Styles.CloseButton>
         </Styles.Wrapper>
       </React.Fragment>,
       document.body,

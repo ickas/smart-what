@@ -88,7 +88,7 @@ export const formatter = {
   saveBackgroundColor: colors.purple850,
   saveHoverBackgroundColor: colors.purple900,
   saveHeight: rem("90px"),
-  saveFontSize: rem("26px"),
+  saveFontSize: rem("18px"),
   saveColor: colors.white,
   fontFamily: typography.fontFamilyMono,
   fontSize: typography.fontSize,
