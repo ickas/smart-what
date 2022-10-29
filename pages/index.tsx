@@ -35,6 +35,8 @@ export default function Home() {
       </form>
       <hr />
       <Translation>translation goes here!</Translation> */}
+
+        <Translation>yo</Translation>
       </main>
     </>
   );
