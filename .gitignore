@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-dump.json
+dump.*
 
 # next.js
 /.next/
