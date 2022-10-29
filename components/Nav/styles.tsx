@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, device, global, layout, nav } from "@/styles/design-tokens";
+import { colors, global, layout, nav } from "@/styles/design-tokens";
 
 interface OverlayProps {
   bg?: boolean;
@@ -32,14 +32,22 @@ export const Overlay = styled.div<OverlayProps>`
     justify-content: space-between;
     align-items: center;
 
+    &:first-child {
+      a {
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+
     svg {
-      display: none;
       margin-top: ${rem("8px")};
       width: auto;
       height: ${rem("38px")};
     }
 
     img {
+      margin-top: ${rem("6px")};
       width: auto;
       height: ${rem("40px")};
     }
@@ -56,12 +64,16 @@ export const Overlay = styled.div<OverlayProps>`
     }
 
     @media (min-width: 550px) {
-      svg {
-        display: inherit;
-      }
+      &:first-child {
+        a {
+          &:first-child {
+            display: inherit;
+          }
 
-      img {
-        display: none;
+          &:last-child {
+            display: none;
+          }
+        }
       }
     }
   }
